@@ -1,3 +1,14 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./setup_prezto.sh, Install Prezto - it can take a bit of time]
