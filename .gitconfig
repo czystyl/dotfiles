@@ -4,7 +4,6 @@
 [user]
 	name = czystyl
 	email = lukasz.czyszczonik@gmail.com
-	# signingkey = ""
 
 [alias]
 	# add all
@@ -95,7 +94,7 @@
 
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [help]
 	# Automatically correct and execute mistyped commands
@@ -133,3 +132,4 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
