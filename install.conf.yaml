@@ -2,13 +2,25 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.dotfiles: ''
-    ~/.zshrc: zshrc
-    ~/.gitconfig: gitconfig
+    ~/.dotfiles: ""
+    ~/.zshrc: .zshrc
+    ~/.zpreztorc: .zpreztorc
+    ~/.tmux.conf: .tmux.conf
+    ~/.config/nvim/init.vim: init.vim
+    ~/.gitconfig: .gitconfig
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [
+        "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash",
+        Install NVM,
+      ]
     - [./setup_prezto.sh, Install Prezto - it can take a bit of time]
+    - [brew install neovim || brew upgrade neovim, Install neovim]
+    - [
+        "curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
+        Install plug.vim,
+      ]
