@@ -25,6 +25,6 @@
         Install plug.vim,
       ]
     - [
-        ' if [ ! -f ".git_secrets" ]; then cp .git_secrets__template .git_secrets; else echo "Secrets already exist!"; fi',
+        'if [ ! -f ".git_secrets" ]; then cp .git_secrets__template .git_secrets; else echo "Secrets already exist!"; fi',
         "Copy .git_config secrets template",
       ]
