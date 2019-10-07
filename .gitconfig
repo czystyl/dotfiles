@@ -94,7 +94,7 @@
 
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [help]
 	# Automatically correct and execute mistyped commands
@@ -106,7 +106,7 @@
 
 [push]
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
+	default = current
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
@@ -133,3 +133,5 @@
 
 	insteadOf = "gist:"
 
+[gpg]
+	program = gpg1

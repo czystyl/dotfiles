@@ -14,6 +14,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [brew install terminal-notifier, Installing terminal-notifier]
     - [
         "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash",
         Install NVM,
