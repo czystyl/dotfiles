@@ -1,9 +1,11 @@
 [include]
     path = dotfiles/.secrets
+	signingkey = 132E0C2EFC0BC16E
 
 [user]
 	name = czystyl
 	email = lukasz.czyszczonik@gmail.com
+	signingkey = 132E0C2EFC0BC16E
 
 [alias]
 	# add all
@@ -94,7 +96,7 @@
 
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = false
+	gpgsign = true
 
 [help]
 	# Automatically correct and execute mistyped commands
@@ -132,6 +134,3 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
-
-[gpg]
-	program = gpg1
