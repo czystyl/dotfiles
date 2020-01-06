@@ -15,6 +15,9 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [brew install terminal-notifier, Installing terminal-notifier]
+    - [brew install rbenv, Installing rbenv]
+    - [rbenv init || brew upgrade rbenv ruby-build
+, rbenv init]
     - [
         "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash",
         Install NVM,

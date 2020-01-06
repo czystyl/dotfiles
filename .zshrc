@@ -5,7 +5,6 @@ fi
 
 zstyle ':prezto:module:autosuggestions' color 'yes'
 
-
 # NVM CONFIG
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -13,3 +12,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export EDITOR=nvim
 source $HOME/.zsh-background-notify/bgnotify.plugin.zsh
+
+eval "$(rbenv init -)"
+eval $(opam config env)
