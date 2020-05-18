@@ -7,10 +7,10 @@
 
 - link:
     ~/.dotfiles: ""
-    ~/.zshrc: .zshrc
-    ~/.zpreztorc: .zpreztorc
-    ~/.gitconfig: .gitconfig
-    ~/.gnupg: .gnupg
+    ~/.zshrc: zshrc
+    ~/.zpreztorc: zpreztorc
+    ~/.gitconfig: gitconfig
+    ~/.gnupg: gnupg
 
 - shell:
     - ['git submodule update --init --recursive', Installing submodules]

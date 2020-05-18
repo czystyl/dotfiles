@@ -1,5 +1,5 @@
 .DS_Store
 get-pip.py
-.gnupg/*
-!.gnupg/gpg.conf
-!.gnupg/gpg-agent.conf
+gnupg/*
+!gnupg/gpg.conf
+!gnupg/gpg-agent.conf
