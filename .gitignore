@@ -1,2 +1,5 @@
 .DS_Store
-.git_secrets
+get-pip.py
+.gnupg/*
+!.gnupg/gpg.conf
+!.gnupg/gpg-agent.conf

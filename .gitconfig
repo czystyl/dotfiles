@@ -1,11 +1,7 @@
-[include]
-    path = dotfiles/.secrets
-	signingkey = 132E0C2EFC0BC16E
-
 [user]
 	name = czystyl
 	email = lukasz.czyszczonik@gmail.com
-	signingkey = 132E0C2EFC0BC16E
+	signingkey = 90732DA7
 
 [alias]
 	# add all
