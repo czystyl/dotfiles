@@ -13,57 +13,75 @@
     ~/.gnupg: gnupg
 
 - shell:
-    - ['git submodule update --init --recursive', Installing submodules]
+    - ["git submodule update --init --recursive", Installing submodules]
 
-    - ['./setup_prezto.sh || true', Installing and setup Prezto]
+    - ["./setup_prezto.sh || true", Installing and setup Prezto]
 
-    - ['/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"', Installing Homebrew]
-    - ['curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash', Installing NVM ]
+    - [
+        '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"',
+        Installing Homebrew,
+      ]
+    - [
+        "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash",
+        Installing NVM,
+      ]
 
     # Pip install
-    - ['curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py', Installing pip]
-    - ['pip install docker-compose', Installing docker-compose]
+    - [
+        "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py",
+        Installing pip,
+      ]
+    - ["pip install docker-compose", Installing docker-compose]
 
     # Brew install
-    - ['brew install rbenv', Installing rbenv]
-    - ['brew install zsh', Installing zsh] 
-    - ['brew install gpg2 gnupg pinentry-mac', Installing GPG]
-    - ['brew install terminal-notifier', Installing terminal-notifier]
-    - ['brew install tree', Installing tree]
-    - ['brew install git', Installing git]
-    - ['brew install fzf && $(brew --prefix)/opt/fzf/install', Installing fzf]
-    - ['brew install ack', Installing ack]
-    - ['brew install yarn', Installing yarn]
-    - ['brew install watchman', Installing watchman]
-    - ['brew install minikube', Installing minikube]
-    - ['brew install kubectl', Installing kubectl]
+    - ["brew install rbenv", Installing rbenv]
+    - ["brew install zsh", Installing zsh]
+    - ["brew install gpg2 gnupg pinentry-mac", Installing GPG]
+    - ["brew install terminal-notifier", Installing terminal-notifier]
+    - ["brew install tree", Installing tree]
+    - ["brew install git", Installing git]
+    - ["brew install fzf && $(brew --prefix)/opt/fzf/install", Installing fzf]
+    - ["brew install ack", Installing ack]
+    - ["brew install yarn", Installing yarn]
+    - ["brew install watchman", Installing watchman]
+
+    # Kubernetes
+    - ["brew install minikube", Installing minikube]
+    - ["brew install kubectl", Installing kubectl]
 
     # Brew cask install
-    - ['brew cask install google-chrome', Installing Google Chrome]
-    - ['brew cask install google-backup-and-sync', Installing Google backup and sync]
-    - ['brew cask install spectacle', Installing Spectacle]
-    - ['brew cask install iterm2', Installing iTerm2]
-    - ['brew cask install visual-studio-code', Installing Visual Studio Code]
-    - ['brew cask install slack', Installing Slack]
-    - ['brew cask install macpass', Installing MacPass]
-    - ['brew cask install docker', Installing Docker]
-    - ['brew cask install zoomus', Installing Zoom]
-    - ['brew cask install postman', Installing Postman]
-    - ['brew cask install flipper', Installing Flipper]
+    - ["brew cask install google-chrome", Installing Google Chrome]
+    - [
+        "brew cask install google-backup-and-sync",
+        Installing Google backup and sync,
+      ]
+    - ["brew cask install spectacle", Installing Spectacle]
+    - ["brew cask install iterm2", Installing iTerm2]
+    - ["brew cask install visual-studio-code", Installing Visual Studio Code]
+    - ["brew cask install slack", Installing Slack]
+    - ["brew cask install macpass", Installing MacPass]
+    - ["brew cask install docker", Installing Docker]
+    - ["brew cask install zoomus", Installing Zoom]
+    - ["brew cask install postman", Installing Postman]
+    - ["brew cask install flipper", Installing Flipper]
+    - ["brew cask install mongodb-compass", Installing MongoDB Compass]
 
     # Fira font
-    - ['brew tap homebrew/cask-fonts', Installing cask font]
-    - ['brew cask install font-fira-code', Installing fira code font]
+    - ["brew tap homebrew/cask-fonts", Installing cask font]
+    - ["brew cask install font-fira-code", Installing fira code font]
 
     # rb & gem
-    - ['rbenv install 2.6.6 -s', Installing ruby]
-    - ['rbenv global 2.6.6', Set global ruby]
-    - ['rbenv rehash', Rehash ruby]
-    - ['gem install cocoapods', Installing Cocoapods]
+    - ["rbenv install 2.6.6 -s", Installing ruby]
+    - ["rbenv global 2.6.6", Set global ruby]
+    - ["rbenv rehash", Rehash ruby]
+    - ["gem install cocoapods", Installing Cocoapods]
 
     # Settings
-    - ['defaults write com.apple.screencapture location /Users/czysty/Documents/Screenshot', Change screen capture directory]
+    - [
+        "defaults write com.apple.screencapture location /Users/czysty/Documents/Screenshot",
+        Change screen capture directory,
+      ]
 
-    ## With user password
-    - ['sudo xcode-select --switch /Applications/Xcode.app', Configure Xcode]
-    - ['chsh -s /bin/zsh', Set default shell]
+    # With user password
+    - ["sudo xcode-select --switch /Applications/Xcode.app", Configure Xcode]
+    - ["chsh -s /bin/zsh", Set default shell]
