@@ -65,6 +65,7 @@
     - ["brew cask install postman", Installing Postman]
     - ["brew cask install flipper", Installing Flipper]
     - ["brew cask install mongodb-compass", Installing MongoDB Compass]
+    # - ["brew cask install studio-3t", Installing studio-3t] ## not free
 
     # Fira font
     - ["brew tap homebrew/cask-fonts", Installing cask font]
