@@ -1,0 +1,145 @@
+[user]
+name = czystyl
+email = lukasz.czyszczonik@gmail.com
+signingkey = 90732DA7
+
+[alias]
+# add all
+a = add
+aa = add --all
+ap = add --patch
+ci = commit
+cim = commit -m
+co = checkout
+br = branch
+r = reset
+cp = cherry-pick
+
+# Reset Commands
+r = reset
+r1 = reset HEAD^
+r2 = reset HEAD^^
+rh = reset --hard
+rh1 = reset HEAD^ --hard
+rh2 = reset HEAD^^ --hard
+
+# Stash operations
+sl = stash list
+sa = stash apply
+ss = stash save -u
+
+# Shorten status
+s = status -s
+st = status -s
+
+# View abbreviated SHA, description, and history graph of the latest 20 commits
+l = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=relative
+
+# Show the diff between the latest commit and the current state
+d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+# `git di $number` shows the diff between the state `$number` revisions ago and the current state
+di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
+# Show verbose output about tags, branches or remotes
+tags = tag -l
+branches = branch -a
+remotes = remote -v
+
+# List aliases
+aliases = config --get-regexp alias
+
+# Amend the currently staged files to the latest commit
+amend = commit --amend --reuse-message=HEAD
+
+# Remove branches that have already been merged with master
+# a.k.a. ‘delete merged’
+dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+# List contributors with number of commits
+contributors = shortlog --summary --numbered
+
+[apply]
+# Detect whitespace errors when applying a patch
+whitespace = fix
+
+[core]
+# Make `git rebase` safer on macOS
+# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+trustctime = false
+ignoreCase = false
+editor = vim
+pager = delta
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true # use n and N to move between diff sections
+
+[diff]
+colorMoved = default
+
+[color]
+branch = auto
+diff = auto
+status = auto
+
+[color "branch"]
+current = red reverse
+local = blue
+remote = green
+
+[color "diff"]
+meta = yellow
+frag = magenta
+old = red bold
+new = green
+plain = white
+
+[color "status"]
+added = yellow
+changed = green
+untracked = cyan
+
+[commit]
+# https://help.github.com/articles/signing-commits-using-gpg/
+gpgsign = true
+
+[help]
+# Automatically correct and execute mistyped commands
+autocorrect = 1
+
+[merge]
+# Include summaries of merged commits in newly created merge commit messages
+log = true
+conflictstyle = diff3
+
+[push]
+# https://git-scm.com/docs/git-config#git-config-pushdefault
+default = current
+# Make `git push` push relevant annotated tags when pushing branches out.
+followTags = true
+
+[pull]
+default = current
+
+# URL shorthands
+[url "git@github.com:"]
+insteadOf = "gh:"
+pushInsteadOf = "github:"
+pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+insteadOf = "gst:"
+pushInsteadOf = "gist:"
+pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+insteadOf = "gist:"

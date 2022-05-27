@@ -1,0 +1,52 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
+    ~/.zprezto: prezto/
+
+- brew:
+   - zsh
+   - zplug
+   - gnupg
+   - gpg 
+   - gpg2
+   - pinentry-mac
+   - git
+   - docker-compose 
+   # Programming related
+   - fnm
+   - yarn
+   - asdf
+   - elixir
+   - mkcert   
+
+- cask:
+    - iterm2
+    - keepassxc
+    - google-drive
+    - google-chrome
+    - cron
+    - docker
+    - beekeeper-studio
+    - zoom
+    - font-hack-nerd-font
+    - visual-studio-code
+    - brave-browser
+    - rectangle
+    - notion
+    - linear-linear
+    - slack
+    - nordvpn
+    - loom
+    - teamviewer
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [brew tap homebrew/cask-fonts, Install fonts]
+  
