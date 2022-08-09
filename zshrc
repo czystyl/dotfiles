@@ -12,6 +12,7 @@ export PATH=~/.asdf/shims:$PATH
 
 # ALIASES 
 alias dc="docker-compose"
+alias kc="kubectl"
 
 # SETUP
 eval "$(fnm env --use-on-cd)"

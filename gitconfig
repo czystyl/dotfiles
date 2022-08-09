@@ -26,6 +26,7 @@ rh2 = reset HEAD^^ --hard
 # Stash operations
 sl = stash list
 sa = stash apply
+sp = stash pop
 ss = stash save -u
 
 # Shorten status

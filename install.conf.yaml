@@ -1,11 +1,13 @@
 - defaults:
     link:
       relink: true
+      create: true
 
 - clean: ['~']
 
 - link:
     ~/.zshrc: zshrc
+    ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.zprezto: prezto/
@@ -18,13 +20,13 @@
    - gpg2
    - pinentry-mac
    - git
-   - docker-compose 
-   # Programming related
+   - docker-compose    
    - fnm
    - yarn
    - asdf
    - elixir
-   - mkcert   
+   - mkcert
+   - git-delta   
 
 - cask:
     - iterm2
@@ -45,6 +47,10 @@
     - nordvpn
     - loom
     - teamviewer
+    - karabiner-elements
+    - insomnia
+    - google-cloud-sdk
+    - spotify
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
