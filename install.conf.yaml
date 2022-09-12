@@ -1,58 +1,65 @@
 - defaults:
-    link:
-      relink: true
-      create: true
+          link:
+                  relink: true
+                  create: true
+                  recursive: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.zshrc: zshrc
-    ~/.config/nvim/init.vim: init.vim
-    ~/.gitconfig: gitconfig
-    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
-    ~/.zprezto: prezto/
+          ~/.zshrc: zshrc
+          ~/.config/nvim:
+                  path: nvim
+                  glob: true
+          ~/.gitconfig: gitconfig
+          ~/.gnupg/gpg-agent.conf: gpg-agent.conf
+          ~/.zprezto: prezto/
 
 - brew:
-   - zsh
-   - zplug
-   - gnupg
-   - gpg 
-   - gpg2
-   - pinentry-mac
-   - git
-   - docker-compose    
-   - fnm
-   - yarn
-   - asdf
-   - elixir
-   - mkcert
-   - git-delta   
+          - zsh
+          - zplug
+          - gnupg
+          - gpg
+          - gpg2
+          - pinentry-mac
+          - git
+          - docker-compose
+          - fnm
+          - yarn
+          - asdf
+          - elixir
+          - mkcert
+          - git-delta
+          - neovim
+          - ripgrep # telescope.nvim
+          - cocoapods
 
 - cask:
-    - iterm2
-    - keepassxc
-    - google-drive
-    - google-chrome
-    - cron
-    - docker
-    - beekeeper-studio
-    - zoom
-    - font-hack-nerd-font
-    - visual-studio-code
-    - brave-browser
-    - rectangle
-    - notion
-    - linear-linear
-    - slack
-    - nordvpn
-    - loom
-    - teamviewer
-    - karabiner-elements
-    - insomnia
-    - google-cloud-sdk
-    - spotify
+          - iterm2
+          - keepassxc
+          - google-drive
+          - google-chrome
+          - cron
+          - docker
+          - beekeeper-studio
+          - zoom
+          - font-hack-nerd-font
+          - visual-studio-code
+          - brave-browser
+          - rectangle
+          - notion
+          - linear-linear
+          - slack
+          - nordvpn
+          - loom
+          - teamviewer
+          - karabiner-elements
+          - insomnia
+          - google-cloud-sdk
+          - spotify
+          - android-studio
+          - zulu11
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [brew tap homebrew/cask-fonts, Install fonts]
-  
+          - [git submodule update --init --recursive, Installing submodules]
+          - [brew tap homebrew/cask-fonts, Install fonts]

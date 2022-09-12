@@ -47,6 +47,12 @@ return require('packer').startup(function(use)
         requires = {{'nvim-lua/plenary.nvim'}}
     }
 
+    use 'glepnir/lspsaga.nvim'
+    use 'MunifTanjim/prettier.nvim'
+    use 'jose-elias-alvarez/null-ls.nvim'
+
+    use 'lewis6991/gitsigns.nvim'
+
     if packer_bootstrap then
         require('packer').sync()
     end
