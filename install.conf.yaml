@@ -59,6 +59,7 @@
           - spotify
           - android-studio
           - zulu11
+          - logitech-options
 
 - shell:
           - [git submodule update --init --recursive, Installing submodules]
